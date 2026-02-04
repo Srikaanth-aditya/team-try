@@ -1,0 +1,135 @@
+/* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* ---------- ROOT ---------- */
+:root {
+  --primary: #0b5ed7;
+  --secondary: #198754;
+  --danger: #dc3545;
+  --bg: #f4f6f8;
+  --text: #1f2937;
+}
+
+/* ---------- BODY ---------- */
+body {
+  background: var(--bg);
+  color: var(--text);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------- MAIN CONTAINER ---------- */
+.kiosk-container {
+  width: 90vw;
+  height: 90vh;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- HEADER ---------- */
+.kiosk-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.kiosk-header h1 {
+  font-size: 2rem;
+}
+
+.language-select {
+  font-size: 1.2rem;
+  padding: 10px 16px;
+}
+
+/* ---------- SERVICE GRID ---------- */
+.service-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding-top: 24px;
+}
+
+/* ---------- SERVICE CARD ---------- */
+.service-card {
+  background: #f9fafb;
+  border: 2px solid #e5e7eb;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, border 0.1s ease;
+}
+
+.service-card:active {
+  transform: scale(0.97);
+  border-color: var(--primary);
+}
+
+.service-card img {
+  width: 64px;
+  margin-bottom: 12px;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  font-size: 1.4rem;
+  padding: 16px 28px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* ---------- FOOTER ---------- */
+.kiosk-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 2px solid #e5e7eb;
+}
+
+/* ---------- ACCESSIBILITY ---------- */
+button, select {
+  outline: none;
+}
+
+@media (max-width: 1024px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
